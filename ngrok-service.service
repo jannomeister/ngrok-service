@@ -1,0 +1,11 @@
+[Unit]
+Description=Service for running ngrok tcp
+
+[Service]
+User=<working_directory>
+ExecStart=/bin/bash -c '<path_to_your_bash_script>/ngrok-tcp.sh'
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
